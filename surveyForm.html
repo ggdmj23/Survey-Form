@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">  
+    
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="surveyForm.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title"><span class="win-cover">Win</span><span class="e-cover"> e-</span><span class="list-cover">List<sup><small> &reg;</small></sup></span><span class="survey"> Survey Form</span></h1>
+            <p id="description">Thank you for taking the time to help us improve the platform</p>
+        </header>
+        <div class="form-container">
+            <form id="survey-form">
+                <div class="form-field">
+                    <label class="label-block" id="name-label" for="name">Name</label>
+                    <input class="edit-input" id="name" type="text" name="name" maxlength="32" pattern="[a-zA-Z0-9\s]+" placeholder="Enter your name" required/>
+                </div>
+                <div class="form-field">
+                    <label class="label-block" id="email-label" for="email">Email</label>
+                    <input class="edit-input" id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Enter your Email" required/>
+                </div>    
+                <div class="form-field">    
+                    <label class="label-block" id="number-label" for="number">Age (optional)</label>
+                    <input class="edit-input" id="number" type="number" name="age" pattern="[0-9]+" min="18" max="110" step="1" placeholder="Age"/>
+                </div>    
+                <div class="form-field">    
+                    <label id="select-label" for="dropdown">Which option best describes your current role?</label>
+                    <select class="edit-input" id="dropdown" type="select" name="role" list="select-role" required>
+                        <datalist id="select-role">
+                        <option disabled selected value>Select current role</option>
+                        <option value="customer">Customer</option>
+                        <option value="sommelier">Sommelier</option>
+                        <option value="staff">Staff</option>
+                        <option value="management">Management</option>
+                        <option value="other">Other</option>
+                        </datalist>
+                    </select>
+                </div>  
+                <div class="form-field">  
+                    <fieldset>
+                        <legend>How easy was to find your wine?</legend>
+                        <p><label class="radio-label" for="radio1"><input id="radio1" type="radio" name="usability" value="easy" checked/>Easy</label></p>
+                        <p><label class="radio-label" for="radio2"><input id="radio2" type="radio" name="usability" value="normal"/>Normal</label></p>
+                        <p><label class="radio-label" for="radio3"><input id="radio3" type="radio" name="usability" value="difficult"/>Difficult</label></p>
+                    </fieldset>    
+                </div>   
+                <div class="form-field">  
+                    <fieldset>
+                        <legend>Would you recommend Win e-List?</legend>
+                        <p><label class="radio-label" for="radio4"><input id="radio4" type="radio" name="recommend" value="definitely" checked/>Definitely</label></p>
+                        <p><label class="radio-label" for="radio5"><input id="radio5" type="radio" name="recommend" value="maybe"/>Maybe</label></p>
+                        <p><label class="radio-label" for="radio6"><input id="radio6" type="radio" name="recommend" value="not-sure"/>Not sure</label></p>
+                    </fieldset>    
+                </div>   
+                <div class="form-field">    
+                    <label id="select-label2" for="dropdown2">What is your favorite feature of Win e-List?</label>
+                    <select class="edit-input" id="dropdown2" type="select" name="feature" list="select-feature">
+                        <datalist id="select-feature">
+                        <option disabled selected value>Select an option</option>
+                        <option value="public">Public menus</option>
+                        <option value="images">Images</option>
+                        <option value="custom">Custom menus</option>
+                        <option value="search">Search filters</option>
+                        <option value="data">Wine data</option>
+                        </datalist>
+                    </select>
+                </div>  
+                <div class="form-field">  
+                    <fieldset>
+                        <legend>Which information would you like to receive from us? (Check all that apply)</legend>
+                        <p><label class="checkbox-label" for="checkbox1"><input id="checkbox1" type="checkbox" name="info" value="tasting"/>Tastings</label></p>
+                        <p><label class="checkbox-label" for="checkbox2"><input id="checkbox2" type="checkbox" name="info" value="event"/>Events</label></p>
+                        <p><label class="checkbox-label" for="checkbox3"><input id="checkbox3" type="checkbox" name="info" value="visit"/>Visits</label></p>
+                        <p><label class="checkbox-label" for="checkbox4"><input id="checkbox4" type="checkbox" name="info" value="course"/>Courses</label></p>
+                        <p><label class="checkbox-label" for="checkbox5"><input id="checkbox5" type="checkbox" name="info" value="job"/>Jobs</label></p>
+                        <p><label class="checkbox-label" for="checkbox6"><input id="checkbox6" type="checkbox" name="info" value="document"/>Documentation</label></p>
+                    </fieldset>    
+                </div>  
+                <div class="form-field">
+                    <label class="label-block" for="comments">Any comments or suggestions?</label>
+                    <textarea class="edit-input" id="comments" name="comment" placeholder="Enter your comment here..."></textarea>
+                </div>
+                <div class="form-field">
+                    <button class="edit-input" type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <footer id="footer">
+            <p id="title"><span class="winMini">Win</span><span class="e-Mini"> e-</span><span class="listMini">List<sup><small> &reg;</small></sup></span></p>
+            <p class="survey"><small>&copy; Copyright 2020 ggdmj23</small></p>
+        </footer>
+    </div>   
+<script src="surveyForm.js">
+</script>
+    
+</body>
+</html>
